@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+*{box-sizing: border-box !important;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family) !important;
+    background-image: url(../public/assets/images/light-patten.svg);
+    background-size: cover;
+    background-position: center center;
+    width: 100% !important ;    
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+.product{
+
+    transition:  0.1s !important;
+}
+.product:hover
+{
+    box-shadow:  rgba(114, 240, 76, 0.3) 0px 2px 4px -1px,rgba(113, 235, 7, 0.3) 0px 4px 5px -1px,rgba(10, 235, 17, 0.3) 0px 1px 10px 1px,rgba(10, 235, 18, 0.3)0px 1px 10px 0px !important;
+    border: solid 1px var(--main-color);
+}
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+.redCount{
+    top: -5px;
+    right: -15px;
+
+   width: 22px;
+    height: 22px;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 50% !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link{
+    font-size: 1.3rem !important;
+    color: black !important;
+}
+.fet{
+    width: fit-content !important;
+}
+
+.footer{
+background-color: #f1f2f3 !important;
+}
+
+
+
+/* Your custom CSS file or style block */
+.nav-link.active {
+    color: var(--main-color) !important; /* Use !important to ensure it overrides Bootstrap styles */
+  }
+  
