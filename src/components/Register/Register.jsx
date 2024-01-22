@@ -45,7 +45,7 @@ export default function Register() {
       .required("phone is valid"),
     password: Yup.string()
       .matches(/^[A-Z][a-z 0-9]{5,12}$/, "password start with uppercase min char 5 max char 12")
-      .required("password is required"),
+      .required("password is required").max(12).min(5)
     rePassword: Yup.string()
       .oneOf([Yup.ref("password")], "rePassword should match password")
       .required("password is required"),
