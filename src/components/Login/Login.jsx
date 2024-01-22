@@ -42,7 +42,7 @@ export default function Login() {
 
     password: Yup.string()
       .matches(/^[A-Z][a-z 0-9]{5,12}$/, "password start with uppercase min char 5 max 12")
-      .required("password is required"),
+      .required("password is required").max(12).min(5)
   });
 
   const formik = useFormik({
