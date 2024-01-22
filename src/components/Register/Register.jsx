@@ -44,7 +44,7 @@ export default function Register() {
       .matches(/^01[0125][0-9]{8}$/, "phone is invalid")
       .required("phone is valid"),
     password: Yup.string()
-      .matches(/^[A-Z][a-z 0-9]{5,12}$/, "password start with uppercase")
+      .matches(/^[A-Z][a-z 0-9]{5,12}$/, "password start with uppercase min char 5 max char 12")
       .required("password is required"),
     rePassword: Yup.string()
       .oneOf([Yup.ref("password")], "rePassword should match password")
