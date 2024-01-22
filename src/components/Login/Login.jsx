@@ -41,7 +41,7 @@ export default function Login() {
     email: Yup.string().email("email is invalid").required("email is required"),
 
     password: Yup.string()
-      .matches(/^[A-Z][a-z0-9]{5,8}$/, "password start with uppercase")
+      .matches(/^[A-Z][a-z 0-9]{5,12}$/, "password start with uppercase min char 5 max 12")
       .required("password is required"),
   });
 
